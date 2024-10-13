@@ -1,8 +1,10 @@
+package Test01;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Test {
+public class locators {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -17,9 +19,15 @@ public class Test {
 		driver.findElement(By.xpath("//*[@id=\"btn_one\"]")).click();
 		Thread.sleep(2000);
 		driver.switchTo().alert().accept();
+		driver.findElement(By.cssSelector("#btn_two")).click();
+		driver.switchTo().alert().dismiss();
+		driver.findElement(By.linkText("CONTACT US FORM TEST")).click();
+		driver.findElement(By.name("first_name")).sendKeys("Phiphsuh");
+
 		Thread.sleep(5000);
 		driver.close();
 		System.out.println("over");
+
 	}
 
 }

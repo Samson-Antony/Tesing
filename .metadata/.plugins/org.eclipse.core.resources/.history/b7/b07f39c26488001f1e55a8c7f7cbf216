@@ -14,7 +14,7 @@ public class Test {
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 		driver.findElement(By.linkText("BUTTONS")).click();
-		driver.findElement(By.xpath("//*[@id=\"btn_one\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"btn_one\"]"));
 		Thread.sleep(2000);
 		driver.switchTo().alert().accept();
 		Thread.sleep(5000);
